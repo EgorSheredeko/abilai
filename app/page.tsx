@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { CSSProperties } from 'react';
 
 export default function Home() {
   const phoneNumber = '7707270398'; 
@@ -61,13 +61,14 @@ export default function Home() {
   );
 }
 
-const styles = {
+// Добавили строгую типизацию CSSProperties для TypeScript
+const styles: { [key: string]: CSSProperties } = {
   container: {
     minHeight: '100vh',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#070a13', // Холодный темный фон
+    backgroundColor: '#070a13',
     fontFamily: 'Courier New, Courier, monospace, sans-serif',
     padding: '20px',
   },
@@ -155,7 +156,6 @@ const styles = {
     fontWeight: 'bold',
     textTransform: 'uppercase',
     letterSpacing: '1px',
-    transition: 'all 0.3s ease',
     cursor: 'pointer',
     width: '100%',
     boxSizing: 'border-box',
